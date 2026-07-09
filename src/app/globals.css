@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* ---- LIGHT THEME (default) ---- */
+  :root {
+    --canvas: 250 250 252;
+    --canvas-soft: 243 240 250;
+    --surface: 255 255 255;
+    --line: 228 224 232;
+    --paper: 17 15 20;
+    --muted: 100 96 110;
+    --coral: 210 20 35;      /* red accent */
+    --coral-dim: 160 12 24;
+    --coral-bright: 235 60 75;
+    --pink: 110 30 130;
+    --pink-soft: 160 90 175;
+    --lime: 22 140 90;       /* used only for success states */
+    --lime-dim: 15 110 70;
+    --panel-alpha: 1;
+    --panel-blur: 0px;
+  }
+
+  /* ---- DARK THEME ---- */
+  html.dark {
+    --canvas: 8 8 9;
+    --canvas-soft: 18 18 20;
+    --surface: 255 255 255;
+    --line: 40 40 44;
+    --paper: 244 244 246;
+    --muted: 154 150 160;
+    --coral: 225 35 50;
+    --coral-dim: 180 20 34;
+    --coral-bright: 255 80 95;
+    --pink: 168 85 247;
+    --pink-soft: 196 140 255;
+    --lime: 132 204 96;
+    --lime-dim: 100 175 70;
+    --panel-alpha: 0.04;
+    --panel-blur: 20px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-canvas text-paper font-body antialiased transition-colors duration-300;
+  }
+
+  ::selection {
+    @apply bg-coral/25 text-paper;
+  }
+
+  :focus-visible {
+    outline: 2px solid rgb(var(--coral));
+    outline-offset: 3px;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer components {
+  .container-forge {
+    @apply mx-auto w-full max-w-7xl px-6 md:px-10;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-line bg-canvas-soft px-4 py-1.5
+    font-mono text-[11px] tracking-[0.15em] uppercase text-coral;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-aurora-gradient text-white font-display font-medium
+    px-8 py-4 text-sm md:text-base rounded-full shadow-glow transition-all duration-300
+    hover:-translate-y-0.5 hover:shadow-glow-pink active:translate-y-0 active:scale-[0.98];
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 border border-line bg-canvas-soft
+    text-paper font-display font-medium px-8 py-4 text-sm md:text-base rounded-full transition-all duration-300
+    hover:border-coral/50;
+  }
+
+  /* Adaptive glass card — solid card in light mode, frosted glass in dark */
+  .panel {
+    @apply relative border border-line rounded-4xl shadow-soft;
+    background-color: rgb(var(--surface) / var(--panel-alpha));
+    backdrop-filter: blur(var(--panel-blur));
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1.5 rounded-full bg-coral/10 px-3 py-1 font-mono text-[10px]
+    uppercase tracking-[0.15em] text-coral;
+  }
+
+  .stat-figure {
+    @apply font-display text-[clamp(3.5rem,10vw,7rem)] leading-none text-paper;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-aurora-gradient bg-clip-text text-transparent;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(var(--canvas-soft));
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--line));
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--coral));
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
