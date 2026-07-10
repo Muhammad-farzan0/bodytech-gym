@@ -33,7 +33,7 @@ export default function HeroScene() {
   return (
     <section
       ref={ref}
-      className="relative h-[145vh] [perspective:1600px]"
+      className="relative h-[130vh] md:h-[145vh] bg-canvas [perspective:1600px]"
       aria-label="Hero"
     >
       <div className="sticky top-0 h-screen overflow-hidden bg-canvas">
@@ -113,22 +113,20 @@ export default function HeroScene() {
             ● 3 Branches Across Lahore
           </span>
           <h1
-  className="mt-6 max-w-3xl text-[9vw] font-normal leading-[0.95] text-paper sm:text-6xl md:text-7xl lg:text-[5.5rem]"
-  data-aos="fade-up"
-  data-aos-delay="80"
->
-  Kickstart your
-  <br />
-  <span className="font-bold text-coral">transformation.</span>
-</h1>
-
+            className="mt-6 max-w-3xl text-[9vw] font-normal leading-[0.95] text-paper sm:text-6xl md:text-7xl lg:text-[5.5rem]"
+            data-aos="fade-up"
+            data-aos-delay="80"
+          >
+            Kickstart your
+            <br />
+            <span className="font-bold text-coral">transformation.</span>
+          </h1>
           <p
             className="mt-6 max-w-md text-base text-muted md:text-lg"
             data-aos="fade-up"
             data-aos-delay="160"
           >
-            Certified trainers, separate ladies &amp; gents wings, and classes
-            for every goal — welcome to Lahore&apos;s premier fitness center.
+            Certified trainers, separate ladies & gents wings, &amp; and classes for every goal — welcome to Lahore's &amp; premier fitness center. Experience &amp; state‑of‑the‑art equipment and a motivating environment &amp; designed to help you achieve results faster.
           </p>
           <div
             className="mt-8 flex flex-wrap items-center gap-4"
@@ -150,8 +148,6 @@ export default function HeroScene() {
             EME · Rahbar · Bahria Town
           </span>
         </motion.div>
-
-        
       </div>
     </section>
   );
