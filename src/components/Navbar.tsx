@@ -47,7 +47,7 @@ export default function Navbar() {
             alt="BodyTech Logo"
             width={120}
             height={40}
-            className="h-6 w-auto transition-transform group-hover:scale-105 sm:h-8 lg:h-12"
+            className="h-10 w-auto transition-transform group-hover:scale-105 sm:h-10 lg:h-12"
           />
         </Link>
 
