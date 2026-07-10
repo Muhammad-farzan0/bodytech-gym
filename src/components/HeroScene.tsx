@@ -109,18 +109,19 @@ export default function HeroScene() {
           style={{ y: headlineY, opacity: headlineOpacity }}
           className="container-forge relative flex h-full flex-col justify-center"
         >
-          <span className="eyebrow w-fit" data-aos="fade-up">
+          <span className="eyebrow w-fit md:mt-[40px]" data-aos="fade-up">
             ● 3 Branches Across Lahore
           </span>
           <h1
-            className="mt-6 max-w-3xl text-[13vw] font-normal leading-[0.95] text-paper sm:text-6xl md:text-7xl lg:text-[5.5rem]"
-            data-aos="fade-up"
-            data-aos-delay="80"
-          >
-            Kickstart your
-            <br />
-            <span className="font-bold text-coral">transformation.</span>
-          </h1>
+  className="mt-6 max-w-3xl text-[9vw] font-normal leading-[0.95] text-paper sm:text-6xl md:text-7xl lg:text-[5.5rem]"
+  data-aos="fade-up"
+  data-aos-delay="80"
+>
+  Kickstart your
+  <br />
+  <span className="font-bold text-coral">transformation.</span>
+</h1>
+
           <p
             className="mt-6 max-w-md text-base text-muted md:text-lg"
             data-aos="fade-up"
@@ -150,13 +151,7 @@ export default function HeroScene() {
           </span>
         </motion.div>
 
-        {/* scroll cue */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 font-mono text-[10px] uppercase tracking-[0.3em] text-muted">
-          <div className="flex flex-col items-center gap-2">
-            <span>Scroll</span>
-            <span className="h-8 w-px animate-flicker bg-muted/60" />
-          </div>
-        </div>
+        
       </div>
     </section>
   );

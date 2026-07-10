@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
+import Image from "next/image";
 
 const links = [
   { href: "/", label: "Home" },
@@ -35,14 +36,19 @@ export default function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 md:px-6">
       <nav
         className={`container-forge flex h-16 items-center justify-between rounded-full border border-line px-5 transition-all duration-300 ${
-          scrolled ? "bg-canvas/80 backdrop-blur-xl shadow-soft" : "bg-canvas-soft/70 backdrop-blur-md"
+          scrolled
+            ? "bg-canvas/80 backdrop-blur-xl shadow-soft"
+            : "bg-canvas-soft/70 backdrop-blur-md"
         }`}
       >
         <Link href="/" className="flex items-center gap-2 group">
-          <span className="h-2.5 w-2.5 rounded-full bg-coral transition-transform group-hover:scale-125" />
-          <span className="font-display text-lg font-medium tracking-tight text-paper">
-            BodyTech
-          </span>
+          <Image
+            src="/logo1.png"
+            alt="BodyTech Logo"
+            width={120}
+            height={40}
+            className="h-6 w-auto transition-transform group-hover:scale-105 sm:h-8 lg:h-12"
+          />
         </Link>
 
         <ul className="hidden items-center gap-8 md:flex">
@@ -62,14 +68,15 @@ export default function Navbar() {
             );
           })}
         </ul>
-
         <div className="hidden items-center gap-3 md:flex">
           <ThemeToggle />
-          <Link href="/membership" className="btn-primary !px-5 !py-2.5 !text-sm">
+          <Link
+            href="/membership"
+            className="btn-primary !px-5 !py-2.5 !text-sm"
+          >
             Join Now
           </Link>
         </div>
-
         <div className="flex items-center gap-2 md:hidden">
           <ThemeToggle />
           <button
@@ -91,7 +98,9 @@ export default function Navbar() {
                 <Link
                   href={link.href}
                   className={`block rounded-xl px-3 py-3 font-display text-base ${
-                    pathname === link.href ? "bg-coral/10 text-paper" : "text-muted"
+                    pathname === link.href
+                      ? "bg-coral/10 text-paper"
+                      : "text-muted"
                   }`}
                 >
                   {link.label}
@@ -99,7 +108,10 @@ export default function Navbar() {
               </li>
             ))}
             <li className="pt-2">
-              <Link href="/membership" className="btn-primary w-full justify-center">
+              <Link
+                href="/membership"
+                className="btn-primary w-full justify-center"
+              >
                 Join Now
               </Link>
             </li>

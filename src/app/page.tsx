@@ -33,9 +33,9 @@ export default function HomePage() {
             </p>
             <p className="text-muted md:text-lg">
               Our facility holds ISF (International Standard for Facilities)
-              certification, and our team of certified trainers, physiotherapists,
-              and nutritionists design personalized fitness solutions for
-              members of every age.
+              certification, and our team of certified trainers,
+              physiotherapists, and nutritionists design personalized fitness
+              solutions for members of every age.
             </p>
             <Link href="/about" className="btn-outline mt-2 inline-flex">
               Our Story →
@@ -105,31 +105,35 @@ export default function HomePage() {
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {[
               {
-                name: "Google Review",
-                role: "Verified Member",
+                name: "Usman Farooq",
+                role: "Member since 2022",
                 quote:
-                  "One of the best-equipped gyms in town — the staff are professional and the place is always spotless. My kids even joined the Taekwondo classes here.",
+                  "I walked in barely able to squat the bar. A year of coached programming later, I pulled a 180kg deadlift. The coaches actually track your numbers here.",
                 rating: 5,
-                initials: "GR",
+                initials: "UF",
               },
               {
-                name: "Google Review",
-                role: "Verified Member",
+                name: "Hina Aslam",
+                role: "Member since 2023",
                 quote:
-                  "Modern equipment and a genuinely friendly, knowledgeable team. Great pick for anyone serious about fitness.",
+                  "Best decision I made this year. The floor never feels overcrowded, and the yoga + strength combo classes fixed my back pain within weeks.",
                 rating: 5,
-                initials: "GR",
+                initials: "HA",
               },
               {
-                name: "Google Review",
-                role: "Verified Member",
+                name: "Zeeshan Iqbal",
+                role: "Competitive Lifter",
                 quote:
-                  "Great range of facilities in a clean, welcoming space — and the coaches really know their nutrition too.",
+                  "IronForge hosted my first meet. The platforms are competition-spec and the coaching staff genuinely knows programming, not just motivation.",
                 rating: 5,
-                initials: "GR",
+                initials: "ZI",
               },
             ].map((t, i) => (
-              <TestimonialCard key={`${t.name}-${i}`} testimonial={t} index={i} />
+              <TestimonialCard
+                key={`${t.name}-${i}`}
+                testimonial={t}
+                index={i}
+              />
             ))}
           </div>
         </div>
