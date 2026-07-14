@@ -109,11 +109,11 @@ export default function HeroScene() {
           style={{ y: headlineY, opacity: headlineOpacity }}
           className="container-forge relative flex h-full flex-col justify-center"
         >
-          <span className="eyebrow w-fit md:mt-[40px]" data-aos="fade-up">
+          <span className="eyebrow w-fit md:mt-[90px]" data-aos="fade-up">
             ● 3 Branches Across Lahore
           </span>
           <h1
-            className="mt-6 max-w-3xl text-[9vw] font-normal leading-[0.95] text-paper sm:text-6xl md:text-7xl lg:text-[5.5rem]"
+            className="mt-6 lg:mt-1 max-w-3xl text-[9vw] font-normal leading-[0.95] text-paper sm:text-6xl md:text-7xl lg:text-[5.5rem]"
             data-aos="fade-up"
             data-aos-delay="80"
           >
