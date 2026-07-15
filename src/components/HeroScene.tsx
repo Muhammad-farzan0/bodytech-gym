@@ -126,7 +126,7 @@ export default function HeroScene() {
             data-aos="fade-up"
             data-aos-delay="160"
           >
-            Certified trainers, separate ladies & gents wings, &amp; and classes for every goal — welcome to Lahore's &amp; premier fitness center. Experience &amp; state‑of‑the‑art equipment and a motivating environment &amp; designed to help you achieve results faster.
+          Certified trainers, separate ladies & gents wings, and classes for every goal — welcome to Lahore’s premier fitness center. Experience state‑of‑the‑art equipment in a motivating environment designed to help you achieve results faster. 
           </p>
           <div
             className="mt-8 flex flex-wrap items-center gap-4"
